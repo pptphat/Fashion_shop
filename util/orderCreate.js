@@ -1,7 +1,8 @@
+require('dotenv').config();
+
 const mongoose = require("mongoose");
 const Order = require("../models/order");
-const urlConnect = `mongodb+srv://brogrammers2527:brogrammers2527@cluster0-mwti3.mongodb.net/test?retryWrites=true&w=majority
-`;
+const urlConnect = process.env.DB;;
 
 //Connect to db
 mongoose.connect(urlConnect, { useNewUrlParser: true }, err => {
