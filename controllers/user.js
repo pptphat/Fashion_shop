@@ -26,12 +26,14 @@ exports.getAccount = (req, res, next) => {
 
 exports.getAccountChange = (req, res, next) => {
   var cartProduct;
+  console.log(req.session.cart)
   if (!req.session.cart) {
     cartProduct = null;
   } else {
     var cart = new Cart(req.session.cart);
     cartProduct = cart.generateArray();
   }
+  console.log(cartProduct)
   res.render("account-change-info", {
     title: "Thay đổi thông tin tài khoản",
     user: req.user,

@@ -8,6 +8,16 @@ const nodemailer = require("nodemailer");
 const Users = require("../models/user");
 var bcrypt = require("bcryptjs");
 var randomstring = require("randomstring");
+const express = require('express')
+const jwt = require('jsonwebtoken')
+const verifyTorken = require('../middleware/auth')
+const tokenHandler = require('../config/auth')
+
+const app = express()
+var bodyParser = require('body-parser')
+
+// create application/x-www-form-urlencoded parser
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 exports.getLogin = (req, res, next) => {
   var cartProduct;
@@ -31,12 +41,35 @@ exports.getLogin = (req, res, next) => {
 };
 
 exports.postLogin = (req, res, next) => {
-  passport.authenticate("local-signin", {
-    successReturnToOrRedirect: "/merge-cart",
-    failureRedirect: "/login",
-    failureFlash: true
-  })(req, res, next);
+  console.log(req.body.username)
+  Users.findOne(req.body.username)
+  .then((user) => {
+    if (!user) return res.sendStatus(401)
+    console.log(user)
+    // // Create JWT
+    // const tokens = generateTokens(user)
+    // updateRefreshToken(username, tokens.refreshToken)
+
+    // console.log(users)
+
+    // console.log(tokens)
+
+    // // res.json(tokens)
+
+    passport.authenticate("local-signin", {
+      successReturnToOrRedirect: "/merge-cart",
+      failureRedirect: "/login",
+      failureFlash: true
+    })(req, res, next);
+  })
+  .catch(next);
+  
+  
+
+  
 };
+
+
 
 exports.getLogout = (req, res, next) => {
   if (req.session.cart) {
