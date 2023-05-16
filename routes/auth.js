@@ -4,7 +4,6 @@ const passport = require("passport");
 const authController = require("../controllers/auth");
 const userController = require("../controllers/user");
 
-
 router.get("/login", authController.getLogin);
 router.post("/login", authController.postLogin);
 
@@ -22,11 +21,12 @@ router.get("/verify-email", authController.getVerifyEmail);
 router.post("/verify-email", authController.postVerifyEmail);
 
 router.get("/forgot-password", authController.getForgotPass);
-
 router.post("/forgot-password", authController.postForgotPass);
 
-router.get("/change-password", authController.getChangePassword);
+router.get("/reset-password", authController.getResetPass);
+router.post("/reset-password", authController.postResetPass);
 
+router.get("/change-password", authController.getChangePassword);
 router.post("/change-password", authController.postChangePassword);
 
 module.exports = router;
