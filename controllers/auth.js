@@ -12,6 +12,7 @@ const express = require("express");
 const jwt = require("jsonwebtoken");
 const verifyTorken = require("../middleware/auth");
 const tokenHandler = require("../config/auth");
+const sendMail = require("../util/email");
 
 const app = express();
 var bodyParser = require("body-parser");
@@ -20,7 +21,7 @@ var bodyParser = require("body-parser");
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 exports.getLogin = async (req, res, next) => {
-    await Users.deleteOne({ username: "nhutquang10062002@gmail.com" });
+    //await Users.deleteOne({ username: "nhutquang10062002@gmail.com" });
     var cartProduct;
 
     if (!req.session.cart) {
@@ -42,7 +43,7 @@ exports.getLogin = async (req, res, next) => {
     }
 };
 
-exports.postLogin = (req, res, next) => {
+exports.postLogin = async (req, res, next) => {
     // // Create <JWT></JWT>
     // const tokens = generateTokens(user)
     // updateRefreshToken(username, tokens.refreshToken)
@@ -52,7 +53,7 @@ exports.postLogin = (req, res, next) => {
     // console.log(tokens)
 
     // // res.json(tokens)
-
+    
     passport.authenticate("local-signin", {
         successReturnToOrRedirect: "/merge-cart",
         failureRedirect: "/login",
@@ -61,6 +62,7 @@ exports.postLogin = (req, res, next) => {
 };
 
 exports.getLogout = (req, res, next) => {
+    console.log(req.session)
     if (req.session.cart) {
         req.session.cart = null;
     }
@@ -98,45 +100,59 @@ exports.postSignUp = (req, res, next) => {
 };
 
 exports.getVerifyEmail = async (req, res, next) => {
-    var transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 465,
-        secure: true,
-        auth: {
-            user: process.env.ENV_USERNAME,
-            pass: process.env.ENV_PASSWORD,
-        },
-    });
     const user = await Users.findOne({ username: req.user.username });
-    console.log(user);
 
     if (!user.verify_token) {
         user.createEmailToken();
-        console.log(user);
-        var mainOptions = {
-            from: "Crepp so gud",
-            to: req.user.email,
-            subject: "Test",
-            text: "text ne",
-            html: `<div style="font-family: Helvetica,Arial,sans-serif;min-width:1000px;overflow:auto;line-height:2">
-                        <div style="margin:50px auto;width:70%;padding:20px 0">
-                          <div style="border-bottom:1px solid #eee">
-                            <a href="" style="font-size:1.4em;color: #00466a;text-decoration:none;font-weight:600">Bros</a>
-                          </div>
-                          <p style="font-size:1.1em">Hi,</p>
-                          <p>Thank you for choosing Bros. Use the following OTP to complete your Sign Up procedures. OTP is valid for 5 minutes</p>
-                          <h2 style="background: #00466a;margin: 0 auto;width: max-content;padding: 0 10px;color: #fff;border-radius: 4px;">${user.verify_token}</h2>
-                          <p style="font-size:0.9em;">Regards,<br />Bros</p>
-                          <hr style="border:none;border-top:1px solid #eee" />
-                        </div>
-                      </div>`,
-        };
-        transporter.sendMail(mainOptions, (err, info) => {
-            if (err) {
-                console.log(err);
-            } else {
-                console.log("Sent:" + info.response);
-            }
+
+        await sendMail({
+            email: req.user.email,
+            subject: "Verify Your Email Address",
+            text: "text",
+            html: `<div
+            style="
+                font-family: Helvetica, Arial, sans-serif;
+                min-width: 1000px;
+                overflow: auto;
+                line-height: 2;
+                font-size: 20px;
+            "
+        >
+            <div style="margin: 50px auto; width: 70%; padding: 20px 0">
+                <div style="border-bottom: 1px solid #eee">
+                    <a
+                        href=""
+                        style="
+                            font-size: 1.4em;
+                            color: #00466a;
+                            text-decoration: none;
+                            font-weight: 600;
+                        "
+                        >Bros</a
+                    >
+                </div>
+                <p style="font-size: 1.1em">Hi,</p>
+                <p>
+                    Thank you for choosing Bros. Use the following OTP to complete your
+                    Sign Up procedures. OTP is valid for 5 minutes
+                </p>
+                <h2
+                    style="
+                        background: #00466a;
+                        margin: 0 auto;
+                        width: max-content;
+                        padding: 0 10px;
+                        color: #fff;
+                        border-radius: 4px;
+                    "
+                >
+                    ${user.verify_token}
+                </h2>
+                <p style="font-size: 0.9em">Regards,<br />Bros</p>
+                <hr style="border: none; border-top: 1px solid #eee" />
+            </div>
+        </div>
+        `,
         });
         await user.save();
     }
@@ -162,7 +178,7 @@ exports.postVerifyEmail = async (req, res, next) => {
         username: req.user.username,
         verify_token: token,
     });
-    
+
     if (!user) {
         req.flash("error", "Mã xác thực không hợp lệ");
         return res.redirect("/verify-email");
