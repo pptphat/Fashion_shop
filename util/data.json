@@ -1,0 +1,813 @@
+[
+    {
+        "name": "Áo Hoodie Oversize",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 40,
+        "price": 29,
+        "size": ["XL", "XXL"],
+        "productType": {
+            "main": "hoodie",
+            "sub": "Hoodie"
+        },
+        "color": ["Xanh dương"],
+        "tags": ["Hoodie", "Vintage"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/v7dq08oaazyemihnl09t.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/j4fmxsrofjptsx9lj3dv.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/tanq3hjhgoehksvulc92.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562967/WebProject/b8qhajvdbu7grg5wa953.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Polo",
+        "materials": ["100% Polyester"]
+    },
+    {
+        "name": "Túi da",
+        "description": "Looking for a vintage duffel bag, worry no more we present to you uber - cool distressed leather duffel bag, a bag designer sophisticated leather duffel bag for men and women,it caters to the young and rebellious you, store your laptop ,books, college material, office files,personal dairy and lot's more, Spacious, appealing and great as fashion accessories,these bag are a joy to carry.",
+        "stock": 10,
+        "price": 199,
+        "size": [""],
+        "productType": {
+            "main": "tui",
+            "sub": "Túi"
+        },
+        "color": ["Nâu"],
+        "tags": ["Bag", "Women"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/fuagnszjiajc7q8uktni.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/fogsi0ponpsogckaiyo3.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/hyrgxo5ifcelbeqsmylv.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/kecu5edur4imc8koqwqa.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Gucci",
+        "materials": ["Da bò", "Canvas"]
+    },
+    {
+        "name": "Quần Jean Nữ",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 50,
+        "price": 304.43,
+        "size": ["M", "L", "XL"],
+        "productType": {
+            "main": "jean",
+            "sub": "Jean"
+        },
+        "color": ["Xanh dương", "Xanh nhạt", "Xanh lá", "Vàng", "Hồng"],
+        "tags": ["Jean", "Women"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/wcr7ozdnheiolbfbexoq.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/jq3qxhd9mqgozl1vxipe.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/crxih7osy2ktrqwobxg7.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/tvqpuonjqb4koplqinyt.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/trqjwkjhlwvaaxwxwtuh.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/fgmfrgbml0uottfcxu1m.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/bud843wu2jzypybunkfm.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/qlxfrsj527ucypriponk.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/yis5yyzan78cfyw4auh2.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/vovse9pqzqiddp8il4b3.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/gygupd3vsngbpowl1xwc.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/s5rbyolfeia02bp6ln6e.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Crepp",
+        "materials": ["Da bò", "Canvas"]
+    },
+    {
+        "name": "Giày Sneaker Nam Polo Ralph Lauren Faxon Low Sneaker",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 20,
+        "price": 369.57,
+        "size": [""],
+        "productType": {
+            "main": "giay",
+            "sub": "Giày"
+        },
+        "color": ["Xám"],
+        "tags": ["Shoes", "Men"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/jynettqbukxxwdgsmcxn.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/xaqzygmqygrhut9ua8wz.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/vmpfkzbqhdulavmaiify.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/ufyojmhfqyjf1qp65hu2.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Polo",
+        "materials": ["96% Canvas", "4% Polyurethane"]
+    },
+    {
+        "name": "Áo Sơ Mi Tay Dài Form Vừa Sọc Caro",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 20,
+        "price": 20,
+        "size": ["M", "L", "XL", "XXL"],
+        "productType": {
+            "main": "aosomi",
+            "sub": "Áo sơ mi"
+        },
+        "color": ["Xanh dương"],
+        "tags": ["Shirt", "Men"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/hfpq1zao6obrqc4fyklh.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/tqdunfii5spqmo3ptrjt.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/cjb0umbc1722uopdwva6.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Mob",
+        "materials": ["Cotton"]
+    },
+    {
+        "name": "Áo Hoodie Oversize",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 40,
+        "price": 29,
+        "size": ["L", "XL", "XXL"],
+        "productType": {
+            "main": "hoodie",
+            "sub": "Hoodie"
+        },
+        "color": ["Cam"],
+        "tags": ["Hoodie", "Vintage"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/hlynj0mmax0vwrsykvjn.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/w11aaukdn7a5swtbh30k.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/ay4doeyc2c3ciafn8nzz.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/xu8px3kz8gkvxsd6x0ou.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Polo",
+        "materials": ["100% Polyester"]
+    },
+    {
+        "name": "Áo Hoodie Oversize",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 40,
+        "price": 29,
+        "size": ["XL", "XXL"],
+        "productType": {
+            "main": "hoodie",
+            "sub": "Hoodie"
+        },
+        "color": ["Trắng"],
+        "tags": ["Hoodie", "Women"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/ri1sxrrrr5q51gltbcvv.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/wcyigbnqzwqhfc1cx3mv.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/gmzrmh5s5mokvlkvqna8.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/h32ipkm5yjku0qvxp4v8.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Polo",
+        "materials": ["100% Polyester"]
+    },
+    {
+        "name": "Áo Khoác Phao Gile Lông Vũ Siêu Nhẹ",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 12,
+        "price": 25,
+        "size": ["S", "M"],
+        "productType": {
+            "main": "aokhoac",
+            "sub": "Áo khoác"
+        },
+        "color": ["Trắng"],
+        "tags": ["Jacket", "Women"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/y0rai606kapytxfsr2jv.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/xonm15aoen6qswqhscrs.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/rfjgcjbaobfcczum2yz6.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562968/WebProject/krdlmyjuhbgkymmtnknr.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Polo",
+        "materials": ["Lông vũ"]
+    },
+    {
+        "name": "Áo Thun Nam Cổ Tròn Tay Ngắn Sọc Lính",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 30,
+        "price": 10,
+        "size": ["L", "XL", "XXL"],
+        "productType": {
+            "main": "aothun",
+            "sub": "Áo thun"
+        },
+        "color": ["Xám"],
+        "tags": ["T-shirt", "Men"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/ixb6h20p54bk2crkzxcj.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562967/WebProject/ghu1omzpcubdlkwtk3b6.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562967/WebProject/o9xjyzzyfhbzlf8gwkmi.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/sixhg5jtumqjp1umuh2w.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Polo",
+        "materials": ["Cotton"]
+    },
+    {
+        "name": "Áo Khoác Phao Gile Lông Vũ Siêu Nhẹ",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 12,
+        "price": 25,
+        "size": ["S", "M"],
+        "productType": {
+            "main": "aokhoac",
+            "sub": "Áo khoác"
+        },
+        "color": ["Vàng kim"],
+        "tags": ["Jacket", "Women"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/robzww0qzrdrogodlrqy.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/hhbe7lw8kw1qkfntftii.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/piqb64afnawuibpomkal.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/xobmald7kmkaqixq25za.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Polo",
+        "materials": ["Lông vũ"]
+    },
+    {
+        "name": "Kính Mát Nữ",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 8,
+        "price": 25,
+        "size": [""],
+        "productType": {
+            "main": "phukien",
+            "sub": "Phụ kiện"
+        },
+        "color": ["Vàng Pastel"],
+        "tags": ["Sunglasses", "Women"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/wcl8n6kixqjy2ly5r5hj.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/xjyprqkop9asbntdxzeo.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Mob",
+        "materials": ["Nhựa"]
+    },
+    {
+        "name": "Giày Sneaker Nam Polo Ralph Lauren Faxon Low Sneaker",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 20,
+        "price": 369.57,
+        "size": [""],
+        "productType": {
+            "main": "giay",
+            "sub": "Giày"
+        },
+        "color": ["Xanh rêu"],
+        "tags": ["Shoes", "Men"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/uopfmezt1mjph45bsura.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/ze33kahc1s3zooxpm9np.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/bvgtozmiual97npsrypx.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562967/WebProject/ilixwhewc82kv77rofoz.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Polo",
+        "materials": ["96% Canvas", "4% Polyurethane"]
+    },
+    {
+        "name": "Áo Len Nữ",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 30,
+        "price": 50,
+        "size": ["M", "L", "XL"],
+        "productType": {
+            "main": "aokhoac",
+            "sub": "Áo khoác"
+        },
+        "color": ["Xanh Federa"],
+        "tags": ["Jacket", "Women"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/uwwt1zlgytwrdhmrjrf9.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/lebm95gmip3m3ik7dq68.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562967/WebProject/dnufujvfacwpolpe2lg8.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/fhizwopghwjovtc5pq1i.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Polo",
+        "materials": ["Len"]
+    },
+    {
+        "name": "Nón Lưỡi Trai",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 20,
+        "price": 25,
+        "size": [""],
+        "productType": {
+            "main": "non",
+            "sub": "Nón"
+        },
+        "color": ["Xanh Federa"],
+        "tags": ["Cap", "Women", "Men"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/aqftppidshx2r54xpnfg.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562967/WebProject/yyscaetggwcqcj0jvsiv.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Polo",
+        "materials": ["100% Polyester"]
+    },
+    {
+        "name": "Áo Sơ Mi Tay Dài Form Vừa Sọc Caro",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 20,
+        "price": 20,
+        "size": ["M", "L", "XL", "XXL"],
+        "productType": {
+            "main": "aosomi",
+            "sub": "Áo sơ mi"
+        },
+        "color": ["Xanh lá"],
+        "tags": ["Shirt", "Women"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/fnkd74tl7c5s1tuzvjia.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/op0xtylrospqnvkgyoa3.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562968/WebProject/cqzdgvllcyno4vqn80zl.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Mob",
+        "materials": ["Cotton"]
+    },
+    {
+        "name": "Áo Sơ Mi Tay Dài Form Vừa",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 5,
+        "price": 24,
+        "size": ["M", "L", "XL", "XXL"],
+        "productType": {
+            "main": "aosomi",
+            "sub": "Áo sơ mi"
+        },
+        "color": ["Xanh nhạt"],
+        "tags": ["Shirt", "Women"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/rxws7lu9pfu2taffvxmi.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/o30i8pll184ui2atinje.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562967/WebProject/egpxbuqlsmpajqgxbvlb.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/sab5cphm5zm3tadirdlw.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Mob",
+        "materials": ["Cotton"]
+    },
+    {
+        "name": "Giày Cao Gót",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 4,
+        "price": 58,
+        "size": [""],
+        "productType": {
+            "main": "giay",
+            "sub": "Giày"
+        },
+        "color": ["Nâu"],
+        "tags": ["Shoes", "Women"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/j3a2tfks6p7y7gva4tjl.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/fhzyeu7fjnahvgdl5ymb.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/lhe5rexgollxeg1ndtdk.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/qsvejs0j2lyrslvieufa.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Mob",
+        "materials": ["96% Canvas", "4% Polyurethane"]
+    },
+    {
+        "name": "Áo Len Nam",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 30,
+        "price": 55,
+        "size": ["M", "L", "XL", "XXL"],
+        "productType": {
+            "main": "aokhoac",
+            "sub": "Áo khoác"
+        },
+        "color": ["Vàng Pastel"],
+        "tags": ["Jacket", "Men"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562968/WebProject/k74x6vst6wcvdxdxumun.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562968/WebProject/hjv24uq0betddvgsbo2c.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/v0jhngzwokqbeaofmj7z.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562968/WebProject/wxbqdn7saerwhboxufmx.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Polo",
+        "materials": ["Len"]
+    },
+    {
+        "name": "Giày Sneaker Nữ Polo Ralph Lauren Faxon High Sneaker",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 20,
+        "price": 375,
+        "size": [""],
+        "productType": {
+            "main": "giay",
+            "sub": "Giày"
+        },
+        "color": ["Trắng"],
+        "tags": ["Shoes", "Women"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/zrtyq51pydynqob0dohw.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/jugv9bdq4lkpxizkmakg.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/chf0jzxacqbyhbhewjp0.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/uept0nay1p0q88b2uzb7.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Polo",
+        "materials": ["96% Canvas", "4% Polyurethane"]
+    },
+    {
+        "name": "Áo Sơ Mi Tay Dài Form Vừa",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 20,
+        "price": 30,
+        "size": ["M", "L", "XL", "XXL"],
+        "productType": {
+            "main": "aosomi",
+            "sub": "Áo sơ mi"
+        },
+        "color": ["Trắng"],
+        "tags": ["Shirt", "Men"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/mecvwlgweg2jrplmkczi.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/jyd0epcqzzgrwcnqwazm.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/nwfrsfivby1k4ic8ldjq.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Mob",
+        "materials": ["Cotton"]
+    },
+    {
+        "name": "Thắt Lưng Nữ",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 20,
+        "price": 5,
+        "size": [""],
+        "productType": {
+            "main": "phukien",
+            "sub": "Phụ kiện"
+        },
+        "color": ["Trắng", "Đen", "Nâu"],
+        "tags": ["Belt", "Women"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562968/WebProject/apfmhbjrglcgnp68ji6b.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/o5dbiujj4g34ca4zj3wi.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/y6hpjrlsm457tjforh5a.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/gudqjdhovcel4g38aacm.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Mob",
+        "materials": ["Da bò"]
+    },
+    {
+        "name": "Áo Thun Nam Cổ Tròn Tay Ngắn Sọc ",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 50,
+        "price": 30,
+        "size": ["L", "XL", "XXL"],
+        "productType": {
+            "main": "aothun",
+            "sub": "Áo thun"
+        },
+        "color": ["Trắng"],
+        "tags": ["T-shirt", "Men"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562968/WebProject/lsygwfmcm1izfwv7nqvv.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562968/WebProject/coffgd1u1j4kz1vh9zsy.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/tkqjzgnvqixbkutemzr0.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562967/WebProject/ingawlj8snsugqqw4p5z.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Polo",
+        "materials": ["Cotton"]
+    },
+    {
+        "name": "Áo Khoác Blazer Dáng Suông 2 Cúc",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 20,
+        "price": 70,
+        "size": ["S", "M"],
+        "productType": {
+            "main": "aokhoac",
+            "sub": "Áo khoác"
+        },
+        "color": ["Trắng"],
+        "tags": ["Jacket", "Women"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562967/WebProject/khishquhbkiyicucvfzz.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/vvnjyxw9lbpczgmbz6ns.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/yb6efflhfwufaj0svqqd.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/j1qxfybzq2pgbbgatujn.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Polo",
+        "materials": ["100% Polyester"]
+    },
+    {
+        "name": "Áo Sơ Mi Tay Dài Form Vừa",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 5,
+        "price": 24,
+        "size": ["M", "L", "XL", "XXL"],
+        "productType": {
+            "main": "aosomi",
+            "sub": "Áo sơ mi"
+        },
+        "color": ["Xanh rêu"],
+        "tags": ["Shirt", "Women"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/b6q3mtsiezhpdxxuyd3j.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/bbrckalyebjtp3ollwlw.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/bitqjtvbqesy3yccjec8.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/hacgoodcwfshmjeowozz.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Mob",
+        "materials": ["Cotton"]
+    },
+    {
+        "name": "Áo Sơ Mi Tay Dài Họa Tiết Thời Trang",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 5,
+        "price": 42,
+        "size": ["M", "L", "XL"],
+        "productType": {
+            "main": "aosomi",
+            "sub": "Áo sơ mi"
+        },
+        "color": ["Trắng"],
+        "tags": ["Shirt", "Women"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562967/WebProject/lhev83mvxuwbsywrpdu9.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562968/WebProject/gbapuyb3dwdeaijeunbp.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562968/WebProject/lct2iyfszdbgeotmon0s.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/gtvbj0b5dizbdbfbrygw.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Mob",
+        "materials": ["Cotton"]
+    },
+    {
+        "name": "Áo Thun Nữ Kẻ Sọc",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 28,
+        "price": 30,
+        "size": ["M", "L", "XL"],
+        "productType": {
+            "main": "aothun",
+            "sub": "Áo thun"
+        },
+        "color": ["Trắng"],
+        "tags": ["T-shirt", "Women"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562967/WebProject/j7xkllcqsbs6qlfgyzsb.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562967/WebProject/pjtxwwdckkwuangr7nma.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562968/WebProject/wdsepqjyesyfbl0qjvw4.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/s2eho5ivai14y2ofnspw.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Polo",
+        "materials": ["Cotton"]
+    },
+    {
+        "name": "Balo Nữ",
+        "description": "Looking for a vintage duffel bag, worry no more we present to you uber - cool distressed leather duffel bag, a bag designer sophisticated leather duffel bag for men and women,it caters to the young and rebellious you, store your laptop ,books, college material, office files,personal dairy and lot's more, Spacious, appealing and great as fashion accessories,these bag are a joy to carry.",
+        "stock": 10,
+        "price": 99,
+        "size": [""],
+        "productType": {
+            "main": "tui",
+            "sub": "Túi"
+        },
+        "color": ["Nâu"],
+        "tags": ["Bag", "Vintage"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/x0rguipu0ywbushrd9vd.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/qp3ml04hkcefkcycezsq.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562968/WebProject/sredpp2tvmbrputha7os.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Gucci",
+        "materials": ["Da bò", "Canvas"]
+    },
+    {
+        "name": "Đầm Nữ",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 20,
+        "price": 99,
+        "size": ["M", "L", "XL"],
+        "productType": {
+            "main": "dam",
+            "sub": "Đầm"
+        },
+        "color": ["Trắng"],
+        "tags": ["Dress", "Women"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562967/WebProject/cnaydxgliygyefotlktq.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562968/WebProject/bjma0vdtkjxdih7esbif.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/juxfrfekllyznudtve9t.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562967/WebProject/fsycine6siadkqo8pywy.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Mob",
+        "materials": ["Cotton"]
+    },
+    {
+        "name": "Áo Thun Nữ ",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 28,
+        "price": 30,
+        "size": ["M", "L", "XL"],
+        "productType": {
+            "main": "aothun",
+            "sub": "Áo thun"
+        },
+        "color": ["Xanh rêu"],
+        "tags": ["T-shirt", "Women"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/nci8n2ctlvuzlczrw0lv.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/z6r8ygggpv1ro7xh1cth.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/t1ozkqelvkycccq7c496.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562967/WebProject/lcgvptcwtohpjx26cj7v.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Polo",
+        "materials": ["Cotton"]
+    },
+    {
+        "name": "Giày Sneaker Polo Ralph Lauren Faxon Low Sneaker",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 20,
+        "price": 369.57,
+        "size": [""],
+        "productType": {
+            "main": "giay",
+            "sub": "Giày"
+        },
+        "color": ["Trắng"],
+        "tags": ["Shoes", "Men", "Women", "Vintage"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/afcvicdllyxlm6w3eu2r.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562967/WebProject/iph0zjzx5fd8zqryitvx.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562968/WebProject/ns2so8f1jijit2pkkco8.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/lw5q4tqqes0kdhismzgt.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Polo",
+        "materials": ["96% Canvas", "4% Polyurethane"]
+    },
+    {
+        "name": "Nón Lưỡi Trai",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 20,
+        "price": 25,
+        "size": [""],
+        "productType": {
+            "main": "non",
+            "sub": "Nón"
+        },
+        "color": ["Xanh"],
+        "tags": ["Cap", "Women", "Men"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/ley9nftnzuburjyqkcw5.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/ykf07qffeszuip5cotjn.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Polo",
+        "materials": ["100% Polyester"]
+    },
+    {
+        "name": "Áo Hoodie Oversize",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 40,
+        "price": 29,
+        "size": ["L", "XL", "XXL"],
+        "productType": {
+            "main": "hoodie",
+            "sub": "Hoodie"
+        },
+        "color": ["Xanh nhạt"],
+        "tags": ["Hoodie", "Vintage", "Men"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/a0idlzhwcct2jmtnd581.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562968/WebProject/qdntmy0a6evh4xen2hwj.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562966/WebProject/fxaazanxapfu2wfoxhjz.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562967/WebProject/xpgn9nlcbszdvpaiybgk.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Polo",
+        "materials": ["100% Polyester"]
+    },
+    {
+        "name": "Khăn Choàng Cổ",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 13,
+        "price": 44,
+        "size": [""],
+        "productType": {
+            "main": "phukien",
+            "sub": "Phụ kiện"
+        },
+        "color": ["Vàng Pastel"],
+        "tags": ["Scarf", "Women", "Vintage"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562968/WebProject/ckkk16jyax0pqasbyrov.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562968/WebProject/xusxkgkgpju0f1qgfbtj.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Polo",
+        "materials": ["100% Cotton"]
+    },
+    {
+        "name": "Kính Mát Dáng Shield",
+        "description": "Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "stock": 3,
+        "price": 200,
+        "size": [""],
+        "productType": {
+            "main": "phukien",
+            "sub": "Phụ kiện"
+        },
+        "color": ["Vàng Pastel"],
+        "tags": ["Sunglasses", "Women"],
+        "images": [
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562967/WebProject/gr145obdckbjlkkmqrif.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562967/WebProject/rjdsltkgbzv4wpguowrt.jpg",
+            "https://res.cloudinary.com/diimgquir/image/upload/v1684562969/WebProject/lwjzlyfvidtdwrfcqczj.jpg"
+        ],
+        "ofSellers": {
+            "userId": "646a12bc2d995c824c65f8e4"
+        },
+        "labels": "Mob",
+        "materials": ["Kim loại"]
+    }
+]

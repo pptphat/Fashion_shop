@@ -8,9 +8,10 @@ router.get("/", productController.getIndexProducts);
 
 router.get("/product/:productId", productController.getProduct);
 
+router.get("/products", productController.getProducts);
 router.get(
-    "/products/:productType?/:productChild?",
-    productController.getProducts
+    "/products/:productType/:productChild?",
+    productController.getProductsType
 );
 
 router.post("/products/:productType*?", productController.postNumItems);

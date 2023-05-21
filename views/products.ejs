@@ -52,7 +52,7 @@
 					</div> -->
 					<form method="GET">
 					<div class="tt-collapse open">
-						<h3 class="tt-collapse-title">LOẠI SẢN PHẨM</h3>
+						<h3 class="tt-collapse-title">Loại sản phẩm</h3>
 						<div class="tt-collapse-content">
 							
 	
@@ -119,6 +119,7 @@
 								<li><input type="radio" name="size" value="M"> M</li>
 								<li><input type="radio" name="size" value="L"> L</li>
 								<li><input type="radio" name="size" value="XL"> XL</li>
+								<li><input type="radio" name="size" value="XXL"> XXL</li>
 							</ul>
 						</div>
 					</div>
@@ -150,9 +151,10 @@
 						<h3 class="tt-collapse-title">Thương hiệu</h3>
 						<div class="tt-collapse-content">
 							<ul class="tt-list-row" id="product-label">
-								<li><input type="radio" name="label" value="shiro"> Shiro</li>
-								<li><input type="radio" name="label" value="crepp"> Crepp</li>
-								<li><input type="radio" name="label" value="mob"> Mob</li>
+								<li><input type="radio" name="label" value="Shiro"> Shiro</li>
+								<li><input type="radio" name="label" value="Crepp"> Crepp</li>
+								<li><input type="radio" name="label" value="Mob"> Mob</li>
+								<li><input type="radio" name="label" value="Polo"> Polo</li>
 								<li><input type="radio" name="label" value="Gucci"> Gucci</li>
 							</ul>
 						</div>
@@ -244,19 +246,19 @@
 								
 							
 						</div>
-						<div class="tt-product-listing row">
+						<div class="tt-product-listing row" data-onerow="true">
 							<% allProducts.forEach(function(prod) { %>
 
 					
 
-								<div class="col-6 col-md-4 col-lg-3">
-									<div class="tt-product thumbprod-center">
+								<div class="col-6 col-md-4 tt-col-item">
+									<div class="respimgsize tt-product product-parent options-js thumbprod-center">
 										<div class="tt-image-box">
 											
 											
 											<a href="/product/<%= prod._id %>">
-												<span class="tt-img"><img src="http://bros-admin.herokuapp.com/assets/images/<%= prod.images[0] %>" data-src="http://bros-admin.herokuapp.com/assets/images/<%= prod.images[0] %>" alt="" class="loaded" data-was-processed="true"></span>
-												<span class="tt-img-roll-over"><img src="http://bros-admin.herokuapp.com/assets/images/<%= prod.images[1] %>" data-src="http://bros-admin.herokuapp.com/assets/images/<%= prod.images[1] %>" alt="" class="loaded" data-was-processed="true"></span>
+												<span class="tt-img" style="height: 350px; display: block;"><img src="<%= prod.images[0] %>" data-src="<%= prod.images[0] %>" alt="" class="loaded" data-was-processed="true"></span>
+												<span class="tt-img-roll-over"><img src="<%= prod.images[1] %>" data-src="<%= prod.images[1] %>" alt="" class="loaded" data-was-processed="true"></span>
 											</a>
 										</div>
 										<div class="tt-description">

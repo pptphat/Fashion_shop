@@ -20478,7 +20478,7 @@ html.edge .tt-portfolio-content figure:hover figcaption {
     height: auto;
 }
 .tt-product-single-info .tt-add-info ul li {
-    color: #191919;
+    color:#999999;
 }
 .tt-product-single-info .tt-add-info ul li span:first-child {
     letter-spacing: 0.02em;
@@ -20488,7 +20488,7 @@ html.edge .tt-portfolio-content figure:hover figcaption {
     letter-spacing: 0.02em;
 }
 .tt-product-single-info .tt-add-info ul li a {
-    color: #191919;
+    color:#999999;
     transition: all 0.2s linear;
     -ms-transition: all 0.2s linear;
     -webkit-transition: all 0.2s linear;

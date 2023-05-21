@@ -33,10 +33,7 @@
                 >
                     <% prod.images.forEach(function(image) { %>
                     <div>
-                        <img
-                            src="http://bros-admin.herokuapp.com/assets/images/<%= image %>"
-                            alt=""
-                        />
+                        <img src="<%= image %>" alt="" />
                     </div>
                     <% }); %>
                     <div>
@@ -63,13 +60,25 @@
                 <div class="container container-fluid-mobile">
                     <div class="row">
                         <div class="col-6 hidden-xs">
-                            <div class="tt-product-vertical-layout">
-                                <div class="tt-product-single-img">
-                                    <div>
+                            <div
+                                class="tt-product-vertical-layout stickprcol-js"
+                                data-o="134"
+                                style="top: 0px"
+                            >
+                                <div
+                                    class="tt-product-single-img"
+                                    data-scrollzoom="true"
+                                >
+                                    <div class="mediaimageholder">
+                                        <button
+                                            class="tt-btn-zomm tt-top-right tt-btn-zomm-product-page"
+                                        >
+                                            <i class="icon-f-86"></i>
+                                        </button>
                                         <img
                                             class="zoom-product"
-                                            src="http://bros-admin.herokuapp.com/assets/images/<%= prod.images[0] %>"
-                                            data-zoom-image="http://bros-admin.herokuapp.com/assets/images/<%= prod.images[0] %>"
+                                            src="<%= prod.images[0] %>"
+                                            data-zoom-image="<%= prod.images[0] %>"
                                             alt=""
                                         />
                                     </div>
@@ -85,10 +94,10 @@
                                             <a
                                                 class="zoomGalleryActive"
                                                 href="/#"
-                                                data-image="http://bros-admin.herokuapp.com/assets/images/<%= prod.images[0] %>"
-                                                data-zoom-image="http://bros-admin.herokuapp.com/assets/images/<%= prod.images[0] %>"
+                                                data-image="<%= prod.images[0] %>"
+                                                data-zoom-image="<%= prod.images[0] %>"
                                                 ><img
-                                                    src="http://bros-admin.herokuapp.com/assets/images/<%= prod.images[0] %>"
+                                                    src="<%= prod.images[0] %>"
                                                     alt=""
                                             /></a>
                                         </li>
@@ -97,11 +106,9 @@
                                         <li>
                                             <a
                                                 href="/#"
-                                                data-image="http://bros-admin.herokuapp.com/assets/images/<%= image %>"
-                                                data-zoom-image="http://bros-admin.herokuapp.com/assets/images/<%= image %>"
-                                                ><img
-                                                    src="http://bros-admin.herokuapp.com/assets/images/<%= image %>"
-                                                    alt=""
+                                                data-image="<%= image %>"
+                                                data-zoom-image="<%= image %>"
+                                                ><img src="<%= image %>" alt=""
                                             /></a>
                                         </li>
 
@@ -196,7 +203,7 @@
                                     <div class="tt-add-info">
                                         <ul>
                                             <li>
-                                                <span>Loại sản phẩm :</span> <%=
+                                                <span>Loại sản phẩm </span> <%=
                                                 prod.productType.main %>
                                             </li>
                                             <li>
@@ -283,7 +290,7 @@
                                                         <div class="tt-avatar">
                                                             <a href="/#"
                                                                 ><img
-                                                                    src="http://bros-admin.herokuapp.com/assets/images/single/userAvt.png"
+                                                                    src="single/userAvt.png"
                                                                     alt=""
                                                             /></a>
                                                         </div>
@@ -908,7 +915,7 @@
                                             <div class="tt-img">
                                                 <img
                                                     src="/images/loader.svg"
-                                                    data-src="http://bros-admin.herokuapp.com/assets/images/<%= prod.images[0] %>"
+                                                    data-src="<%= prod.images[0] %>"
                                                     alt=""
                                                 />
                                             </div>
@@ -1020,16 +1027,16 @@
                                     <a href="/product/<%= prod._id %>">
                                         <span class="tt-img"
                                             ><img
-                                                src="http://bros-admin.herokuapp.com/assets/images/<%= prod.images[0] %>"
-                                                data-src="http://bros-admin.herokuapp.com/assets/images/<%= prod.images[0] %>"
+                                                src="<%= prod.images[0] %>"
+                                                data-src="<%= prod.images[0] %>"
                                                 alt=""
                                                 class="loaded"
                                                 data-was-processed="true"
                                         /></span>
                                         <span class="tt-img-roll-over"
                                             ><img
-                                                src="http://bros-admin.herokuapp.com/assets/images/<%= prod.images[1] %>"
-                                                data-src="http://bros-admin.herokuapp.com/assets/images/<%= prod.images[1] %>"
+                                                src="<%= prod.images[1] %>"
+                                                data-src="<%= prod.images[1] %>"
                                                 alt=""
                                                 class="loaded"
                                                 data-was-processed="true"

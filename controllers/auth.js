@@ -401,7 +401,7 @@ exports.postResetPass = async (req, res, next) => {
             return res.redirect(
                 `/reset-password?email=${email}&token=${token}`
             );
-        } else if (newpass !== newpass2) {
+        } else if (newpass !== newpass2 || newpass.length < 6) {
             req.flash("error", "Mật khẩu không khớp!");
             return res.redirect(
                 `/reset-password?email=${email}&token=${token}`
