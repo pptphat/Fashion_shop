@@ -70,11 +70,6 @@
                                     data-scrollzoom="true"
                                 >
                                     <div class="mediaimageholder">
-                                        <button
-                                            class="tt-btn-zomm tt-top-right tt-btn-zomm-product-page"
-                                        >
-                                            <i class="icon-f-86"></i>
-                                        </button>
                                         <img
                                             class="zoom-product"
                                             src="<%= prod.images[0] %>"
@@ -90,21 +85,13 @@
                                         id="smallGallery"
                                         class="tt-slick-button-vertical slick-animated-show-js"
                                     >
-                                        <li>
-                                            <a
-                                                class="zoomGalleryActive"
-                                                href="/#"
-                                                data-image="<%= prod.images[0] %>"
-                                                data-zoom-image="<%= prod.images[0] %>"
-                                                ><img
-                                                    src="<%= prod.images[0] %>"
-                                                    alt=""
-                                            /></a>
-                                        </li>
-                                        <% prod.images.forEach(function(image) {
+                                        <% prod.images.forEach(function(image, index) {
                                         %>
                                         <li>
                                             <a
+                                            <% if (index === 0){ %>
+                                                class="zoomGalleryActive"
+                                                <% } %>
                                                 href="/#"
                                                 data-image="<%= image %>"
                                                 data-zoom-image="<%= image %>"
@@ -135,7 +122,7 @@
                                     <ul>
                                         <li>
                                             <span>Lượt xem:</span> <%=
-                                            ++prod.viewCounts %>
+                                            prod.viewCounts %>
                                         </li>
                                         <li>
                                             <span>Số lượng:</span> <%=
@@ -204,7 +191,7 @@
                                         <ul>
                                             <li>
                                                 <span>Loại sản phẩm </span> <%=
-                                                prod.productType.main %>
+                                                prod.productType.sub %>
                                             </li>
                                             <li>
                                                 <span>Tag:</span>

@@ -24,7 +24,12 @@ const urlConnect = process.env.DB;
 // Connect to database
 mongoose.connect(
     urlConnect,
-    { useNewUrlParser: true, useUnifiedTopology: true },
+    {
+        useNewUrlParser: true,
+        useCreateIndex: true,
+        useFindAndModify: false,
+        useUnifiedTopology: true,
+    },
     (err) => {
         if (err) throw err;
         console.log("Connect successfullyy!!");

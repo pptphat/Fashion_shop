@@ -18,7 +18,7 @@ var searchText;
 
 exports.getIndexProducts = (req, res, next) => {
     var cartProduct;
-    
+
     if (!req.session.cart) {
         cartProduct = null;
     } else {
@@ -57,11 +57,25 @@ exports.getProduct = async (req, res, next) => {
             cartProduct = cart.generateArray();
         }
         const prodId = req.params.productId;
-        const product = await Products.findOne({ _id: `${prodId}` });
-        
+        //const product = await Products.findOne({ _id: `${prodId}` });
+        const product = await Products.findOneAndUpdate(
+            { _id: `${prodId}` },
+            {
+                $inc: {
+                    viewCounts: 1,
+                },
+            },
+            {
+                new: true,
+            }
+        );
         const relatedProducts = await Products.find({
             "productType.main": product.productType.main,
+            _id: {
+                $ne: prodId,
+            },
         });
+
         return res.render("product", {
             title: `${product.name}`,
             user: req.user,
@@ -78,7 +92,7 @@ exports.getProduct = async (req, res, next) => {
 exports.getProducts = async (req, res) => {
     try {
         const user = await Users.find();
-        
+
         var cartProduct;
         if (!req.session.cart) {
             cartProduct = null;
@@ -104,7 +118,7 @@ exports.getProducts = async (req, res) => {
             sort_value = "Giá thấp tới cao";
             price = "1";
         }
-        
+
         if (Object.entries(req.query).length === 0) {
             ptype = "";
             psize = "";
@@ -165,7 +179,7 @@ exports.getProductsType = async (req, res, next) => {
             var cart = new Cart(req.session.cart);
             cartProduct = cart.generateArray();
         }
-        
+
         let productType = req.params.productType;
         let productChild = req.params.productChild;
         ptype = req.query.type !== undefined ? req.query.type : ptype;
@@ -185,7 +199,7 @@ exports.getProductsType = async (req, res, next) => {
             sort_value = "Giá thấp tới cao";
             price = "1";
         }
-        
+
         if (Object.entries(req.query).length === 0) {
             ptype = "";
             psize = "";
@@ -216,7 +230,7 @@ exports.getProductsType = async (req, res, next) => {
         if (productChild === undefined) {
             productChild = "";
         }
-       
+
         const numProduct = await Products.find({
             "productType.main": new RegExp(productType, "i"),
             "productType.sub": new RegExp(productChild, "i"),
@@ -237,7 +251,7 @@ exports.getProductsType = async (req, res, next) => {
             .sort({
                 price,
             });
-        
+
         return res.render("products", {
             title: "Danh sách sản phẩm",
             user: req.user,
@@ -413,7 +427,7 @@ exports.getDeleteItem = (req, res, next) => {
             req.user.cart = cart;
             req.user.save();
         }
-        
+
         res.redirect("back");
     });
 };
@@ -434,7 +448,6 @@ exports.addOrder = (req, res, next) => {
 };
 
 exports.postAddOrder = async (req, res, next) => {
-    
     if (req.session.cart.totalQty) {
         var order = new Order({
             user: req.user,
