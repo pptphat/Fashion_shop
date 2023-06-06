@@ -480,3 +480,10 @@ exports.postChangePassword = (req, res, next) => {
         }
     });
 };
+
+exports.postChangeEmail = (req, res, next) => {
+    req.user.isAuthenticated = false;
+    req.user.email = req.body.email;
+    req.user.save();
+    res.redirect("/verify-email");
+};
