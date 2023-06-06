@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <% include partials/head %>
+    <!-- bootstrap5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
   </head>
   <body>
     <% include partials/loader %>
@@ -81,7 +85,12 @@
                     </tr>
                     <tr>
                       <td>E-MAIL:</td>
-                      <td><%= user.email %></td>
+                      <td><%= user.email %>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          Thay đổi
+                        </button>
+                      </td>
                     </tr>
                     <tr>
                       <td>Địa chỉ:</td>
@@ -110,10 +119,49 @@
       <% include partials/footer %>
     </footer>
     <a href="#" class="tt-back-to-top">BACK TO TOP</a>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" style="width: 60%;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Nhập email mới</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-default">
+              <form method="POST" action="/change-email">
+                <div class="form-group">
+                  <label for="shopEmail" class="control-label"
+                    >Địa chỉ email</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="shopEmail"
+                    name="email"
+                    value="<%= user.email %>"
+                  />
+                </div>
+                <button id="submit-change-email" type="submit" hidden></button>
+              </form>
+            </div>
+              
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Thoát</button>
+            <label class="btn btn-primary" for="submit-change-email">Xác nhận</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Partials -->
     <% include partials/modal-addtocartproduct %> <% include
     partials/modal-quickviewmodal %> <% include partials/modal-videoproduct %>
     <% include partials/modal-subscribegood %> <% include
     partials/modal-newsletter %> <% include partials/script %>
+    
   </body>
 </html>
