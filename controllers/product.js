@@ -290,7 +290,7 @@ exports.getSearch = (req, res, next) => {
     }
     searchText =
         req.query.searchText !== undefined ? req.query.searchText : searchText;
-    const page = +req.query.page || 1;
+    const page = req.query.page || 1;
 
     Products.createIndexes({}).catch((err) => {
         console.log(err);
@@ -323,7 +323,7 @@ exports.getSearch = (req, res, next) => {
             });
         })
         .catch((err) => {
-            console.log(err);
+            return res.redirect("/error");
         });
 };
 
