@@ -21,7 +21,9 @@ var bodyParser = require("body-parser");
 // create application/x-www-form-urlencoded parser
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-exports.getLogin = (req, res, next) => {
+exports.getLogin = async (req, res, next) => {
+    const user = await Users.find();
+    console.log(user);
     var cartProduct;
     if (!req.session.cart) {
         cartProduct = null;
@@ -481,9 +483,19 @@ exports.postChangePassword = (req, res, next) => {
     });
 };
 
-exports.postChangeEmail = (req, res, next) => {
-    req.user.isAuthenticated = false;
-    req.user.email = req.body.email;
-    req.user.save();
-    res.redirect("/verify-email");
+exports.postChangeEmail = async (req, res, next) => {
+    try {
+        // Verify the existence of email.
+        const findUser = await Users.findOne({ email: req.body.email });
+        if (findUser) {
+            req.flash("error", "Email đã tồn tại!");
+            return res.redirect("back");
+        }
+        req.user.isAuthenticated = false;
+        req.user.email = req.body.email;
+        req.user.save();
+        return res.redirect("/verify-email");
+    } catch (error) {
+        res.redirect("/error");
+    }
 };
