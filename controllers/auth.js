@@ -140,12 +140,12 @@ exports.getVerifyEmail = async (req, res, next) => {
                                         text-decoration: none;
                                         font-weight: 600;
                                     "
-                                    >Bros</a
+                                    >EzFashion</a
                                 >
                             </div>
                             <h3>Hi,</h3>
                             <p>
-                                Thank you for choosing Bros. Use the following OTP to
+                                Thank you for choosing EzFashion. Use the following OTP to
                                 complete your Sign Up procedures. OTP is valid for 5 minutes
                             </p>
             
@@ -164,7 +164,7 @@ exports.getVerifyEmail = async (req, res, next) => {
                                 ${user.verify_token}
                             </h2>
             
-                            <p style="font-size: 0.9em">Regards,<br />Bros</p>
+                            <p style="font-size: 0.9em">Regards,<br />EzFashion</p>
                             <hr style="border: none; border-top: 1px solid #eee" />
                         </div>
                     </div>
@@ -293,7 +293,7 @@ exports.postForgotPass = async (req, res, next) => {
                                         text-decoration: none;
                                         font-weight: 600;
                                     "
-                                    >Bros</a
+                                    >EzFashion</a
                                 >
                             </div>
                             <h3>Hi,</h3>
@@ -322,7 +322,7 @@ exports.postForgotPass = async (req, res, next) => {
                             >
                                 Reset your password
                             </a>
-                            <p style="font-size: 0.9em">Regards,<br />Bros</p>
+                            <p style="font-size: 0.9em">Regards,<br />EzFashion</p>
                             <hr style="border: none; border-top: 1px solid #eee" />
                             <table class="body-sub" role="presentation">
                                 <tr>
