@@ -45,16 +45,6 @@ exports.getLogin = async (req, res, next) => {
 };
 
 exports.postLogin = async (req, res, next) => {
-    // // Create <JWT></JWT>
-    // const tokens = generateTokens(user)
-    // updateRefreshToken(username, tokens.refreshToken)
-
-    // console.log(users)
-
-    // console.log(tokens)
-
-    // // res.json(tokens)
-
     passport.authenticate("local-signin", {
         successReturnToOrRedirect: "/merge-cart",
         failureRedirect: "/login",
