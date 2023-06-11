@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const passport = require("passport");
+
 const authController = require("../controllers/auth");
-const userController = require("../controllers/user");
+const accountRouter = require("./account");
 
 // router.get('*', authController.jwtAuthen, authController.result);
 router.get("/login", authController.getLogin);
@@ -13,23 +13,16 @@ router.get("/logout", authController.getLogout);
 router.get("/create-account", authController.getSignUp);
 router.post("/create-account", authController.postSignUp);
 
-router.get("/account", authController.jwtAuthen, userController.getAccount);
-
-router.get("/account-change-info", userController.getAccountChange);
-router.post("/account-change-info", authController.jwtAuthen, userController.postAccountChange);
-
 router.get("/verify-email", authController.jwtSign, authController.getVerifyEmail);
 router.post("/verify-email", authController.postVerifyEmail);
 
 router.get("/forgot-password", authController.getForgotPass);
-router.post("/forgot-password", authController.jwtAuthen, authController.postForgotPass);
+router.post("/forgot-password", authController.postForgotPass);
 
 router.get("/reset-password", authController.getResetPass);
-router.post("/reset-password", authController.jwtAuthen, authController.postResetPass);
+router.post("/reset-password", authController.postResetPass);
 
-router.get("/change-password", authController.getChangePassword);
-router.post("/change-password", authController.jwtAuthen, authController.postChangePassword);
+router.use("/account", authController.jwtAuthen, accountRouter)
 
-router.post("/change-email", authController.postChangeEmail);
 
 module.exports = router;

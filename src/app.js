@@ -62,7 +62,6 @@ app.use(
 );
 
 app.use((req, res, next) => {
-    console.log(req.user);
     var cart = new Cart(req.session.cart ? req.session.cart : {});
     req.session.cart = cart;
     res.locals.session = req.session;
