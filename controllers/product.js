@@ -1,8 +1,10 @@
+require("dotenv").config();
 const Products = require("../models/product");
 const Categories = require("../models/productCategory");
 const Cart = require("../models/cart");
 var Users = require("../models/user");
 const Order = require("../models/order");
+const jwt = require("jsonwebtoken");
 
 var ITEM_PER_PAGE = 12;
 var SORT_ITEM;
@@ -481,6 +483,7 @@ exports.postAddOrder = async (req, res, next) => {
 };
 
 exports.mergeCart = (req, res, next) => {
+    console.log("mergeCart: ", req.user)
     if (req.user.cart != {} && req.user.cart) {
         var cart = new Cart(req.session.cart ? req.session.cart : {});
         cart = cart.addCart(req.user.cart);
@@ -488,5 +491,8 @@ exports.mergeCart = (req, res, next) => {
         req.user.cart = cart;
         req.user.save();
     }
-    res.redirect("/");
+    return res.redirect(`/`);
 };
+
+
+

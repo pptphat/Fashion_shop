@@ -23,7 +23,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 exports.getLogin = async (req, res, next) => {
     const user = await Users.find();
-    console.log(user);
+    // console.log(user);
     var cartProduct;
     if (!req.session.cart) {
         cartProduct = null;
@@ -53,10 +53,11 @@ exports.postLogin = async (req, res, next) => {
 };
 
 exports.getLogout = (req, res, next) => {
-    console.log(req.session);
+    // console.log(req.session);
     if (req.session.cart) {
         req.session.cart = null;
     }
+    res.cookie('accessToken', '', { maxAge: 1 });
     req.logout();
     res.redirect("/");
 };
@@ -488,4 +489,21 @@ exports.postChangeEmail = async (req, res, next) => {
     } catch (error) {
         res.redirect("/error");
     }
+};
+
+exports.jwtAuthen = async (req, res, next) => {
+    passport.authenticate("jwt", { session: false })(req, res, next);
+}
+
+exports.jwtSign = (req, res, next) => {
+    const body = { _id: req.user._id, username: req.user.username };
+    const token = jwt.sign({ user: body }, process.env.JWT_SECRET_KEY);
+    
+    res.cookie("accessToken", token, {
+        maxAge: 60 * 60 * 1000, // 1 hour
+        httpOnly: true,
+        secure: true, // lý do không set được cookie trên burp suite
+        sameSite: "strict",
+    });
+    return next();
 };

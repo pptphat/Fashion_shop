@@ -1,8 +1,20 @@
 // passport configuration
 var User = require('../models/user');
 var LocalStrategy = require('passport-local').Strategy;
+const JWTstrategy = require('passport-jwt').Strategy;
 var bcrypt = require('bcryptjs');
 var nodemailer = require('nodemailer');
+
+const cookieExtractor = req => {
+  let jwt = null 
+  // console.log("All cookies: ",req.cookies);
+  if (req && req.cookies) {
+      jwt = req.cookies['accessToken']
+  }
+
+  return jwt
+}
+
 module.exports = function(passport) {
   passport.serializeUser(function(user, done) {
     done(null, user._id);
@@ -109,5 +121,25 @@ module.exports = function(passport) {
         });
       });
     })
+  );
+
+  passport.use(
+    new JWTstrategy(
+      {
+        jwtFromRequest: cookieExtractor,
+        secretOrKey: process.env.JWT_SECRET_KEY,
+      },
+      async (token, done) => {
+        // console.log(token);
+
+        User.findOne({ username: token.user.username }, function(err, user) {
+          console.log(token.user)
+          console.log(user)
+          return done(null, user);
+        })
+  
+        
+      }
+    )
   );
 };

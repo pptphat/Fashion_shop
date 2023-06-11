@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const userController = require("../controllers/user");
 const productController = require("../controllers/product");
+const authController = require("../controllers/auth");
 /* GET home page. */
 
 router.get("/", productController.getIndexProducts);
@@ -34,6 +35,6 @@ router.get("/delete-cart", productController.getDeleteCart);
 
 router.get("/delete-item/:productId", productController.getDeleteItem);
 
-router.get("/merge-cart", productController.mergeCart);
+router.get("/merge-cart", authController.jwtSign, productController.mergeCart);
 
 module.exports = router;
