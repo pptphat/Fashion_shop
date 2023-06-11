@@ -16,10 +16,6 @@ const sendMail = require("../util/email");
 const crypto = require("crypto");
 
 const app = express();
-var bodyParser = require("body-parser");
-
-// create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 exports.getLogin = async (req, res, next) => {
     const user = await Users.find();

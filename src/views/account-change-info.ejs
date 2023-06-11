@@ -25,6 +25,7 @@
               <h6 class="tt-title">Chỉnh sửa thông tin các nhân</h6>
               <div class="form-default">
                 <form method="POST">
+                  <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
                   <div class="form-group">
                     <label for="shopInputFirstName" class="control-label"
                       >Họ *</label

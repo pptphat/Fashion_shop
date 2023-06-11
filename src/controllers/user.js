@@ -4,7 +4,7 @@ const Order = require("../models/order");
 
 exports.getAccount = async (req, res, next) => {
   // console.log(req.session);
-  // console.log(req.user);
+  console.log(req.user);
   var cartProduct;
   if (!req.session.cart) {
     cartProduct = null;
@@ -28,18 +28,19 @@ exports.getAccount = async (req, res, next) => {
 
 exports.getAccountChange = (req, res, next) => {
   var cartProduct;
-  console.log("req.session.cart: ", req.session.cart)
+  // console.log("req.session.cart: ", req.session.cart)
   if (!req.session.cart) {
     cartProduct = null;
   } else {
     var cart = new Cart(req.session.cart);
     cartProduct = cart.generateArray();
   }
-  console.log("cartProduct: ", cartProduct)
+  // console.log("cartProduct: ", cartProduct)
   res.render("account-change-info", {
     title: "Thay đổi thông tin tài khoản",
     user: req.user,
-    cartProduct: cartProduct
+    cartProduct: cartProduct,
+    csrfToken: req.csrfToken()
   });
 };
 

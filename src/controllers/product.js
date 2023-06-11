@@ -483,7 +483,7 @@ exports.postAddOrder = async (req, res, next) => {
 };
 
 exports.mergeCart = (req, res, next) => {
-    console.log("mergeCart: ", req.user)
+    // console.log("mergeCart: ", req.user)
     if (req.user.cart != {} && req.user.cart) {
         var cart = new Cart(req.session.cart ? req.session.cart : {});
         cart = cart.addCart(req.user.cart);

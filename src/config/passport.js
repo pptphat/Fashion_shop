@@ -130,11 +130,21 @@ module.exports = function(passport) {
         secretOrKey: process.env.JWT_SECRET_KEY,
       },
       async (token, done) => {
-        // console.log(token);
+        console.log("JWT token",token);
+        console.log(typeof(token));
+
 
         User.findOne({ username: token.user.username }, function(err, user) {
           console.log(token.user)
           console.log(user)
+          if (err) {
+            return done(err);
+          }
+
+          if(!user) {
+            return done(null, false);
+          }
+
           return done(null, user);
         })
   
