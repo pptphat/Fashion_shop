@@ -21,9 +21,7 @@ var bodyParser = require("body-parser");
 // create application/x-www-form-urlencoded parser
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-exports.getLogin = async (req, res, next) => {
-    const user = await Users.find();
-    console.log(user);
+exports.getLogin = (req, res, next) => {
     var cartProduct;
     if (!req.session.cart) {
         cartProduct = null;
