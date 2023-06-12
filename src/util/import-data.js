@@ -14,7 +14,7 @@ mongoose
         console.log("DB connection successful!");
     });
 
-const data = JSON.parse(fs.readFileSync("./data-product", "utf-8"));
+const data = JSON.parse(fs.readFileSync("./data-product.json", "utf-8"));
 
 const importData = async () => {
     try {
