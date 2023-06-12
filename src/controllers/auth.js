@@ -17,9 +17,7 @@ const crypto = require("crypto");
 
 const app = express();
 
-exports.getLogin = async (req, res, next) => {
-    const user = await Users.find();
-    // console.log(user);
+exports.getLogin = (req, res, next) => {
     var cartProduct;
     if (!req.session.cart) {
         cartProduct = null;
