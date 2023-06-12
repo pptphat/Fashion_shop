@@ -1,7 +1,7 @@
 const sanitizeMiddleware = (req, res, next) => {
-    const lengthQuery = req.query.length;
-    const lengthBody = req.body.length;
-    console.log()
+    const lengthQuery = Object.keys(req.query).length;
+    const lengthBody = Object.keys(req.body).length;
+    
     if (lengthQuery) {
         const keys = Object.keys(req.query);
         keys.forEach((key) => sanitize(req.query[key]));
@@ -16,7 +16,7 @@ const sanitizeMiddleware = (req, res, next) => {
 
 function sanitize(data) {
     if (data instanceof Object) {
-        for (var key in data) {
+        for (let key in data) {
             if (/^\$/.test(key)) {
                 delete data[key];
             } else {

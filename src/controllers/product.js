@@ -121,14 +121,20 @@ exports.getProducts = async (req, res, next) => {
             sort_value = "Giá thấp tới cao";
             price = "1";
         }
+        const keys = Object.keys(req.query).filter((key) => key !== "page");
+        let query = "";
 
-        if (Object.entries(req.query).length === 0) {
+        if (keys.length === 0) {
             ptype = "";
             psize = "";
             plabel = "";
             ptypesub = "";
+        } else {
+            keys.forEach((key) => {
+                query += `&${key}=${req.query[key]}`;
+            });
         }
-
+       
         var page = +req.query.page || 1;
         let totalItems;
         let catName = [];
@@ -193,6 +199,7 @@ exports.getProducts = async (req, res, next) => {
             ITEM_PER_PAGE: ITEM_PER_PAGE,
             sort_value: sort_value,
             cartProduct: cartProduct,
+            query: query,
         });
     } catch (error) {
         res.redirect("/error");
@@ -415,6 +422,3 @@ exports.mergeCart = (req, res, next) => {
     }
     return res.redirect(`/`);
 };
-
-
-
