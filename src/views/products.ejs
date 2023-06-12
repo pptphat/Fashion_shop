@@ -57,32 +57,17 @@
 							
 	
 									<ul class="tt-list-row">
-											<% categories.forEach(function(cat) { %>
+											<% categories.forEach(function(cat, index) { %>
 
 												<%if (cat == currentCat) { %>
 													<li class ="active">
-															<a href="/products/<%= cat %>"><%= cat %></a></li>
+														<a href="/products/<%= cat %>"><%= categoriesChild[index] %></a></li>
+													</li>	
+												<% } else{ %>
+													<li>
+															<a href="/products/<%= cat %>"><%= categoriesChild[index] %></a></li>
 													</li>
-														<% categoriesChild.forEach(function(child) { %>
-															<%if (child == currentChild) { %>
-															<li class="active" style="margin-left: 10px;">
-																	<a href="/products/<%= cat %>/<%= child %>"><%= child %></a></li>
-															</li>
-															<% }; %>
-
-															<%if (child != currentChild) { %>
-																<li style="margin-left: 10px;">
-																		<a href="/products/<%= cat %>/<%= child %>"><%= child %></a></li>
-																</li>
-																<% }; %>
-															<% }); %>
-													<% }; %>
-
-													<%if (cat != currentCat) { %>
-														<li>
-																<a href="/products/<%= cat %>"><%= cat %></a></li>
-													</li>
-														<% }; %>
+												<% } %>
 										
 											<% }); %>
 										</ul>

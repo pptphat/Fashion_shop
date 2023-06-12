@@ -12,9 +12,9 @@ router.get("/product/:productId", sanitizeMiddleware, productController.getProdu
 
 router.get("/products", sanitizeMiddleware, productController.getProducts);
 router.get(
-    "/products/:productType/:productChild?",
+    "/products/:productType?",
     sanitizeMiddleware, 
-    productController.getProductsType
+    productController.getProducts
 );
 
 router.post("/products/:productType*?", productController.postNumItems);

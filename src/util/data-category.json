@@ -1,0 +1,12 @@
+[
+    { "name": "hoodie", "childName": "Hoodie" },
+    { "name": "tui", "childName": "Túi" },
+    { "name": "jean", "childName": "Jean" },
+    { "name": "giay", "childName": "Giày" },
+    { "name": "aosomi", "childName": "Áo sơ mi" },
+    { "name": "aokhoac", "childName": "Áo khoác" },
+    { "name": "aothun", "childName": "Áo thun" },
+    { "name": "phukien", "childName": "Phụ kiện" },
+    { "name": "non", "childName": "Nón" },
+    { "name": "dam", "childName": "Đầm" }
+]
