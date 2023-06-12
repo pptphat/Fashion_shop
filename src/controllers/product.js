@@ -131,10 +131,12 @@ exports.getProducts = async (req, res, next) => {
             ptypesub = "";
         } else {
             keys.forEach((key) => {
-                query += `&${key}=${req.query[key]}`;
+                if (typeof req.query[key] === "string") {
+                    query += `&${key}=${req.query[key]}`;
+                }
             });
         }
-       
+
         var page = +req.query.page || 1;
         let totalItems;
         let catName = [];
