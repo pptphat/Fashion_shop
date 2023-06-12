@@ -4,7 +4,7 @@ const Order = require("../models/order");
 
 exports.getAccount = async (req, res, next) => {
   // console.log(req.session);
-  console.log(req.user);
+  // console.log(req.user);
   var cartProduct;
   if (!req.session.cart) {
     cartProduct = null;

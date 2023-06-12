@@ -4,6 +4,7 @@ const userController = require("../controllers/user");
 const productController = require("../controllers/product");
 const authController = require("../controllers/auth");
 const sanitizeMiddleware = require("../middleware/sanitizeMiddleware");
+const jwtMiddleware = require("../middleware/jwtMiddleware");
 /* GET home page. */
 
 router.get("/", sanitizeMiddleware, productController.getIndexProducts);
@@ -53,6 +54,6 @@ router.get(
     productController.getDeleteItem
 );
 
-router.get("/merge-cart", authController.jwtSign, productController.mergeCart);
+router.get("/merge-cart", jwtMiddleware.jwtSign, productController.mergeCart);
 
 module.exports = router;
