@@ -135,8 +135,7 @@ module.exports = function(passport) {
 
 
         User.findOne({ username: token.user.username }, function(err, user) {
-          console.log(token.user)
-          console.log(user)
+          
           if (err) {
             return done(err);
           }
