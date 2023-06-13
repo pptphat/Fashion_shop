@@ -21,7 +21,8 @@ exports.getAccount = async (req, res, next) => {
       cartProduct: cartProduct,
       order: order,
       messageSucc: messageSucc,
-      messageError:messageError
+      messageError:messageError,
+      csrfToken: req.csrfToken()
     });
   });
 };
