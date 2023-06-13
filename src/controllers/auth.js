@@ -29,6 +29,7 @@ exports.getLogin = (req, res, next) => {
             message: `${message}`,
             user: req.user,
             cartProduct: cartProduct,
+            captcha: process.env.CAPTCHA_SITE_KEY,
         });
     } else {
         return res.redirect("/");
