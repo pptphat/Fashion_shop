@@ -49,7 +49,7 @@ exports.getLogout = (req, res, next) => {
     if (req.session.cart) {
         req.session.cart = null;
     }
-    res.cookie('accessToken', '', { maxAge: 1 });
+    res.cookie("accessToken", "", { maxAge: 1 });
     req.logout();
     res.redirect("/login");
 };
@@ -207,6 +207,7 @@ exports.postVerifyEmail = async (req, res, next) => {
 
 exports.getForgotPass = (req, res, next) => {
     const message = req.flash("error")[0];
+    const messageSuccess = req.flash("success")[0];
     var cartProduct;
     if (!req.session.cart) {
         cartProduct = null;
@@ -217,6 +218,7 @@ exports.getForgotPass = (req, res, next) => {
     res.render("forgot-password", {
         title: "Quên mật khẩu",
         message: `${message}`,
+        messageSuccess: `${messageSuccess}`,
         user: req.user,
         cartProduct: cartProduct,
     });
@@ -225,12 +227,24 @@ exports.getForgotPass = (req, res, next) => {
 exports.postForgotPass = async (req, res, next) => {
     const { email } = req.body;
     const user = await Users.findOne({ email });
+    const now = Date.now();
 
     if (!user) {
         req.flash("error", "Email không hợp lệ");
         return res.redirect("/forgot-password");
-    } else if (user.passwordResetExpires) {
+    }
+    if (user.passwordResetExpires >= now && user.passwordResetExpires) {
         req.flash("error", "Vui lòng kiểm tra Email");
+        return res.redirect("/forgot-password");
+    } else if (user.passwordResetExpires < now && user.passwordResetExpires) {
+        await Users.updateOne(
+            { email: email },
+            { passwordResetToken: undefined, passwordResetExpires: undefined },
+            {
+                new: true,
+            }
+        );
+        req.flash("error", "Token đã hết hạn");
         return res.redirect("/forgot-password");
     }
 
@@ -328,7 +342,7 @@ exports.postForgotPass = async (req, res, next) => {
             </html>
             `,
         });
-
+        req.flash("success", "Vui lòng kiểm tra Email");
         return res.redirect("/forgot-password");
     } catch (error) {
         return res.redirect("/error");
@@ -387,7 +401,7 @@ exports.postResetPass = async (req, res, next) => {
                 `/reset-password?email=${email}&token=${token}`
             );
         } else if (newpass !== newpass2 || newpass.length < 6) {
-            req.flash("error", "Mật khẩu không khớp!");
+            req.flash("error", "Mật khẩu không khớp hoặc ít hơn 6 kí tự!");
             return res.redirect(
                 `/reset-password?email=${email}&token=${token}`
             );
@@ -415,7 +429,7 @@ exports.postResetPass = async (req, res, next) => {
         user.passwordResetExpires = undefined;
         user.isAuthenticated = true;
         await user.save();
-        // console.log(user);
+
         if (!req.session.cart) {
             cartProduct = null;
         } else {
@@ -448,7 +462,6 @@ exports.getChangePassword = (req, res, next) => {
 
 exports.postChangePassword = (req, res, next) => {
     bcrypt.compare(req.body.oldpass, req.user.password, function (err, result) {
-        console.log("alo?");
         if (!result) {
             req.flash("error", "Mật khẩu cũ không đúng!");
             return res.redirect("back");
