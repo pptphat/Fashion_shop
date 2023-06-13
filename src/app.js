@@ -16,6 +16,8 @@ const MongoDBStore = require("connect-mongodb-session")(session);
 const Cart = require("./models/cart");
 const Product = require("./models/product");
 const compression = require("compression");
+const secureMiddleware = require("./middleware/secure");
+
 app.use(compression());
 mongoose.set("useCreateIndex", true);
 
@@ -70,6 +72,7 @@ app.use((req, res, next) => {
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use(secureMiddleware.apiLimiter)
 app.use(shopRouter);
 app.use(authRouter);
 
