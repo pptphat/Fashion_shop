@@ -50,7 +50,7 @@ exports.getLogout = (req, res, next) => {
     }
     res.cookie('accessToken', '', { maxAge: 1 });
     req.logout();
-    res.redirect("/");
+    res.redirect("/login");
 };
 
 exports.getSignUp = (req, res, next) => {
