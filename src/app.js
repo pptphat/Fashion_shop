@@ -62,7 +62,6 @@ app.use(
         cookie: { 
             maxAge: 180 * 60 * 1000, // 3 hours
             httpOnly: true,
-            secure: true, // lý do không set được cookie trên burp suite
             sameSite: "strict"
         }
     })
