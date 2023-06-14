@@ -48,17 +48,18 @@ module.exports = function(passport) {
     'local-signin',
     new LocalStrategy(function(username, password, done) {
       User.findOne({ username: username }, function(err, user) {
-        const userLogin = new User(user);
 
         if (err) {
           return done(err);
         }
 
-        if (!userLogin) {
+        if (!user) {
           return done(null, false, {
             message: 'Sai tên đăng nhập hoặc mật khẩu.'
           });
         }
+
+        const userLogin = new User(user);
 
         if (userLogin.isLock) {
           return done(null, false, {
@@ -71,8 +72,6 @@ module.exports = function(passport) {
               message: "Mật khẩu không hợp lệ! Đã đạt đến số lần thử tối đa, hãy thử lại sau " + 
               moment(userLogin.lockUntil).fromNow()
           });
-        } else {
-          userLogin.loginAttempts = 0;
         }
 
         bcrypt.compare(password, userLogin.password, function(err, result) {
