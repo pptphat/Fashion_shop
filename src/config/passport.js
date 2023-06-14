@@ -74,6 +74,10 @@ module.exports = function(passport) {
           });
         }
 
+        if(userLogin.loginAttempts >= MAX_ATTEMPTS) {
+          userLogin.loginAttempts = 0;
+        } 
+
         bcrypt.compare(password, userLogin.password, function(err, result) {
           if (err) {
             return done(err);
@@ -94,8 +98,8 @@ module.exports = function(passport) {
                   if (err) return done(err);
                 });
                 return done(null, false, {
-                  message: "Invalid password! Reached max attempts, you account unlocks " + 
-                  moment(user.lockUntil).fromNow()
+                  message: "Mật khẩu không hợp lệ! Đã đạt đến số lần thử tối đa, tài khoản của bạn bị khóa trong " + 
+                  moment(userLogin.lockUntil).fromNow()
                 });
             }
 
