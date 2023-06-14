@@ -72,7 +72,10 @@ app.use((req, res, next) => {
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Prevent DDOS
 app.use(secureMiddleware.apiLimiter)
+
+// Routes
 app.use(shopRouter);
 app.use(authRouter);
 

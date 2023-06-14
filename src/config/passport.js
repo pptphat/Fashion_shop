@@ -4,6 +4,10 @@ var LocalStrategy = require('passport-local').Strategy;
 const JWTstrategy = require('passport-jwt').Strategy;
 var bcrypt = require('bcryptjs');
 var nodemailer = require('nodemailer');
+const moment = require("moment");
+
+// Set Vietnamese language
+moment.locale('vi')
 
 const cookieExtractor = req => {
   let jwt = null 
@@ -14,6 +18,14 @@ const cookieExtractor = req => {
 
   return jwt
 }
+
+const MAX_ATTEMPTS = 3; // after which the account should be locked
+const LOCK_WINDOW = 1; // in 5 minutes
+let lock = {
+  attempts: 0,
+  isLock: false,
+  unlocksAt: null,
+};
 
 module.exports = function(passport) {
   passport.serializeUser(function(user, done) {
@@ -36,31 +48,72 @@ module.exports = function(passport) {
     'local-signin',
     new LocalStrategy(function(username, password, done) {
       User.findOne({ username: username }, function(err, user) {
+        const userLogin = new User(user);
+
         if (err) {
           return done(err);
         }
-        if (!user) {
+
+        if (!userLogin) {
           return done(null, false, {
             message: 'Sai tên đăng nhập hoặc mật khẩu.'
           });
         }
 
-        if (user.isLock) {
+        if (userLogin.isLock) {
           return done(null, false, {
             message: 'Tài khoản đã bị khoá.'
           });
         }
 
-        bcrypt.compare(password, user.password, function(err, result) {
+        if(userLogin.lockUntil > new Date()) {
+          return done(null, false, {
+              message: "Mật khẩu không hợp lệ! Đã đạt đến số lần thử tối đa, hãy thử lại sau " + 
+              moment(userLogin.lockUntil).fromNow()
+          });
+        } else {
+          userLogin.loginAttempts = 0;
+        }
+
+        bcrypt.compare(password, userLogin.password, function(err, result) {
           if (err) {
             return done(err);
           }
-          console.log('acc : ' + user.username + ' ' + user.password + ' ' + password, result);
+          console.log('acc : ' + userLogin.username + ' ' + userLogin.password + ' ' + password, result);
           if (!result) {
+            
+            // attempt +1 very time
+            userLogin.loginAttempts = userLogin.loginAttempts + 1;
+            
+            //if reach 3 attempts, lock username
+            if(userLogin.loginAttempts >= MAX_ATTEMPTS) {
+                var d = new Date();
+                d.setMinutes(d.getMinutes() + LOCK_WINDOW);
+                userLogin.lockUntil = d;
+                console.log("ngày: " + userLogin.lockUntil)
+                userLogin.save(function(err) {
+                  if (err) return done(err);
+                });
+                return done(null, false, {
+                  message: "Invalid password! Reached max attempts, you account unlocks " + 
+                  moment(user.lockUntil).fromNow()
+                });
+            }
+
+            userLogin.save(function(err) {
+              if (err) return done(err);
+            });
+            
             return done(null, false, {
               message: 'Sai tên đăng nhập hoặc mật khẩu.'
             });
           }
+
+          userLogin.loginAttempts = 0;
+          userLogin.save(function(err) {
+            if (err) return done(err);
+          });
+
           return done(null, user);
         });
       });

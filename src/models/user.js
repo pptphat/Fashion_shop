@@ -59,6 +59,15 @@ const userSchema = new Schema({
         type: Object,
         required: false,
     },
+    loginAttempts: { 
+        type: Number, 
+        required: true, 
+        default: 0 
+    },
+    lockUntil: { 
+        type: Number, 
+        default: null
+    }
 });
 userSchema.methods.createEmailToken = function () {
     this.verify_token = randomstring.generate({
