@@ -93,7 +93,6 @@ module.exports = function(passport) {
                 var d = new Date();
                 d.setMinutes(d.getMinutes() + LOCK_WINDOW);
                 userLogin.lockUntil = d;
-                console.log("ngày: " + userLogin.lockUntil)
                 userLogin.save(function(err) {
                   if (err) return done(err);
                 });
@@ -117,7 +116,7 @@ module.exports = function(passport) {
             if (err) return done(err);
           });
 
-          return done(null, user);
+          return done(null, userLogin);
         });
       });
     })
