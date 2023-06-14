@@ -3,7 +3,7 @@ var router = express.Router();
 
 const userController = require("../controllers/user");
 const authController = require("../controllers/auth");
-const secureMiddleware = require("../middleware/secure");
+const secureMiddleware = require("../middleware/secureMiddleware");
 const sanitizeMiddleware = require("../middleware/sanitizeMiddleware");
 
 router.get("/", secureMiddleware.csrfProtection, userController.getAccount);

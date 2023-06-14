@@ -16,7 +16,7 @@ const MongoDBStore = require("connect-mongodb-session")(session);
 const Cart = require("./models/cart");
 const Product = require("./models/product");
 const compression = require("compression");
-const secureMiddleware = require("./middleware/secure");
+const secureMiddleware = require("./middleware/secureMiddleware");
 
 app.use(compression());
 mongoose.set("useCreateIndex", true);
@@ -52,7 +52,7 @@ app.use(cookieParser());
 app.use(flash());
 app.use(
     session({
-        secret: "notsecret",
+        secret: process.env.SESSION_SECRET,
         saveUninitialized: true,
         resave: false,
         store: new MongoDBStore({
