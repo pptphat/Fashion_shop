@@ -254,7 +254,7 @@ exports.postForgotPass = async (req, res, next) => {
 
     const resetToken = user.createPasswordResetToken();
     await user.save();
-
+    //const resetURL = `${req.protocol}://${req.get("host")}/reset-password?email=${email}&token=${resetToken}`;
     const resetURL = `https://fashion-shop-u7em.onrender.com/reset-password?email=${email}&token=${resetToken}`;
 
     try {
