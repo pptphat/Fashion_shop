@@ -233,18 +233,22 @@ exports.postForgotPass = async (req, res, next) => {
         req.flash("error", "Email không hợp lệ");
         return res.redirect("/forgot-password");
     }
-    if (user.passwordResetExpires >= now && user.passwordResetExpires) {
-        req.flash("error", "Vui lòng kiểm tra Email");
-        return res.redirect("/forgot-password");
-    } else if (user.passwordResetExpires < now && user.passwordResetExpires) {
-        await Users.updateOne(
-            { email: email },
-            { passwordResetToken: undefined, passwordResetExpires: undefined },
-            {
-                new: true,
-            }
-        );
-        req.flash("error", "Token đã hết hạn");
+    if (user.passwordResetExpires) {
+        if (user.passwordResetExpires >= now) {
+            req.flash("error", "Vui lòng kiểm tra Email");
+        } else if (user.passwordResetExpires < now) {
+            await Users.updateOne(
+                { email: email },
+                {
+                    passwordResetToken: undefined,
+                    passwordResetExpires: undefined,
+                },
+                {
+                    new: true,
+                }
+            );
+            req.flash("error", "Token đã hết hạn");
+        }
         return res.redirect("/forgot-password");
     }
 
