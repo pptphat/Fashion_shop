@@ -16,7 +16,7 @@ router.get("/logout", authController.getLogout);
 router.get("/create-account", authController.getSignUp);
 router.post("/create-account", sanitizeMiddleware, authController.postSignUp);
 
-router.get("/verify-email", sanitizeMiddleware, jwtMiddleware.jwtSign, authController.getVerifyEmail);
+router.get("/verify-email", sanitizeMiddleware, authController.getVerifyEmail);
 router.post("/verify-email", sanitizeMiddleware, authController.postVerifyEmail);
 
 router.get("/forgot-password", authController.getForgotPass);

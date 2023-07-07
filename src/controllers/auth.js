@@ -11,6 +11,7 @@ var randomstring = require("randomstring");
 const express = require("express");
 const sendMail = require("../util/email");
 const crypto = require("crypto");
+const jwt = require('jsonwebtoken');
 
 const app = express();
 
@@ -36,11 +37,41 @@ exports.getLogin = (req, res, next) => {
     }
 };
 
+// exports.postLogin = async (req, res, next) => {
+//     passport.authenticate("local-signin", {
+//         successReturnToOrRedirect: "/merge-cart",
+//         failureRedirect: "/login",
+//         failureFlash: true,
+//     })(req, res, next);
+// };
+
 exports.postLogin = async (req, res, next) => {
-    passport.authenticate("local-signin", {
-        successReturnToOrRedirect: "/merge-cart",
-        failureRedirect: "/login",
-        failureFlash: true,
+    passport.authenticate("local-signin", async (error, user, info) => {
+
+        if (error) {
+            return next(error.message);
+        }
+
+        if (!user) {
+            req.flash("error", info.message);
+            return res.redirect("/login");
+        }
+
+        const body = { _id: user._id, username: user.username };
+
+        const token = jwt.sign({ user: body }, process.env.JWT_SECRET_KEY);
+
+        res.cookie("accessToken", token, {
+            maxAge: 60 * 60 * 1000, // 1 hour
+            httpOnly: true,
+            secure: true, // lý do không set được cookie trên burp suite
+            sameSite: "strict",
+        });
+        
+        req.login(user, (err) => {
+            if (err) { return next(error); }
+            return res.redirect('/');
+        })
     })(req, res, next);
 };
 
@@ -75,11 +106,41 @@ exports.getSignUp = (req, res, next) => {
     }
 };
 
-exports.postSignUp = (req, res, next) => {
-    passport.authenticate("local-signup", {
-        successReturnToOrRedirect: "/verify-email",
-        failureRedirect: "/create-account",
-        failureFlash: true,
+// exports.postSignUp = (req, res, next) => {
+//     passport.authenticate("local-signup", {
+//         successReturnToOrRedirect: "/verify-email",
+//         failureRedirect: "/create-account",
+//         failureFlash: true,
+//     })(req, res, next);
+// };
+
+exports.postSignUp = async (req, res, next) => {
+    passport.authenticate("local-signup", async (error, user, info) => {
+
+        if (error) {
+            return next(error.message);
+        }
+
+        if (!user) {
+            req.flash("error", info.message);
+            return res.redirect("/create-account");
+        }
+
+        const body = { _id: user._id, username: user.username };
+
+        const token = jwt.sign({ user: body }, process.env.JWT_SECRET_KEY);
+
+        res.cookie("accessToken", token, {
+            maxAge: 60 * 60 * 1000, // 1 hour
+            httpOnly: true,
+            secure: true, // lý do không set được cookie trên burp suite
+            sameSite: "strict",
+        });
+        
+        req.login(user, (err) => {
+            if (err) { return next(error); }
+            return res.redirect('/verify-email');
+        })
     })(req, res, next);
 };
 

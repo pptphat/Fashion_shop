@@ -54,6 +54,6 @@ router.get(
     productController.getDeleteItem
 );
 
-router.get("/merge-cart", jwtMiddleware.jwtSign, productController.mergeCart);
+router.get("/merge-cart", productController.mergeCart);
 
 module.exports = router;
