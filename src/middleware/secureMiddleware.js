@@ -35,7 +35,7 @@ exports.captcha = (req, res, next) => {
     fetch(url, {
         method: "post",
     })
-        .then((response) => {console.log("test2"); response.json()})
+        .then((response) => {console.log("test2"); return response.json()})
         .then((google_response) => {
         console.log("google_response")
         // google_response is the object return by
