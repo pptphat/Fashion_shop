@@ -41,15 +41,18 @@ exports.captcha = (req, res, next) => {
         // google as a response
         if (google_response.success == true) {
             // if captcha is verified
+            console.log("captcha is verified")
             next()
         } else {
             // if captcha is not verified
+            console.log("captcha is not verified")
             req.flash("error", "Captcha không đúng !!!");
             return res.redirect("/login");
         }
         })
         .catch((error) => {
             // Some error while verify captcha
+            console.log("Some error while verify captcha")
             return res.json({ error });
         });
 }
