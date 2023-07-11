@@ -29,7 +29,7 @@ exports.captcha = (req, res, next) => {
 
     const url =
     `https://www.google.com/recaptcha/api/siteverify?secret=${secret_key}&response=${response_key}`;
-
+    console.log("url: ", url);
     // Making POST request to verify captcha
     console.log("test1")
     fetch(url, {
