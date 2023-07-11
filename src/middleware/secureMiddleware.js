@@ -31,12 +31,13 @@ exports.captcha = (req, res, next) => {
     `https://www.google.com/recaptcha/api/siteverify?secret=${secret_key}&response=${response_key}`;
 
     // Making POST request to verify captcha
+    console.log("test1")
     fetch(url, {
         method: "post",
     })
-        .then((response) => response.json())
+        .then((response) => {console.log("test2"); response.json()})
         .then((google_response) => {
-
+        console.log("google_response")
         // google_response is the object return by
         // google as a response
         if (google_response.success == true) {
