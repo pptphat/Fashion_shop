@@ -1,6 +1,7 @@
 var bodyParser = require("body-parser");
 const csrf = require("csurf");
 const rateLimit = require("express-rate-limit");
+const fetch = require("isomorphic-fetch");
 
 // create application/x-www-form-urlencoded parser
 exports.urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -29,31 +30,26 @@ exports.captcha = (req, res, next) => {
 
     const url =
     `https://www.google.com/recaptcha/api/siteverify?secret=${secret_key}&response=${response_key}`;
-    console.log("url: ", url);
+
     // Making POST request to verify captcha
-    console.log("test1")
     fetch(url, {
         method: "post",
     })
-        .then((response) => {console.log("test2"); return response.json()})
+        .then((response) => response.json())
         .then((google_response) => {
-        console.log("google_response")
         // google_response is the object return by
         // google as a response
         if (google_response.success == true) {
             // if captcha is verified
-            console.log("captcha is verified")
             next()
         } else {
             // if captcha is not verified
-            console.log("captcha is not verified")
             req.flash("error", "Captcha không đúng !!!");
             return res.redirect("/login");
         }
         })
         .catch((error) => {
             // Some error while verify captcha
-            console.log("Some error while verify captcha")
             return res.json({ error });
         });
 }
