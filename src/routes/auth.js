@@ -4,12 +4,13 @@ const router = express.Router();
 const authController = require("../controllers/auth");
 const sanitizeMiddleware = require("../middleware/sanitizeMiddleware");
 const jwtMiddleware = require("../middleware/jwtMiddleware");
+const secureMiddleware = require("../middleware/secureMiddleware");
 const accountRouter = require("./account");
 
 
 // router.get('*', authController.jwtAuthen, authController.result);
 router.get("/login", authController.getLogin);
-router.post("/login", sanitizeMiddleware, authController.postLogin);
+router.post("/login", secureMiddleware.captcha, sanitizeMiddleware, authController.postLogin);
 
 router.get("/logout", authController.getLogout);
 

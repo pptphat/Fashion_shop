@@ -88,12 +88,15 @@
                       <div class="row">
                         <div class="col-auto mr-auto">
                           <div class="form-group">
-                            <!-- <button class="btn btn-border" type="submit">
-                              Đăng nhập
-                            </button> -->
-                            <button class="btn btn-borde g-recaptcha" data-sitekey="<%= captcha %>" data-callback="onSubmit">
+                            <div class="g-recaptcha"
+                                data-sitekey="<%= captcha %>">
+                            </div>
+                            <button class="btn btn-border" type="submit">
                               Đăng nhập
                             </button>
+                            <!-- <button class="btn btn-borde g-recaptcha" data-sitekey="<%= captcha %>" data-callback="onSubmit">
+                              Đăng nhập
+                            </button> -->
                           </div>
                         </div>
                         <div class="col-auto align-self-end">
